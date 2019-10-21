@@ -173,7 +173,7 @@
     "webpack": "^2.7.0",
     "webpack-cleanup-plugin": "^0.4.1",
     "webpack-dashboard": "^0.3.0",
-    "webpack-dev-server": "^2.11.1",
+    "webpack-dev-server": "^3.1.11",
     "webpack-merge": "^4.1.1",
     "write-file-webpack-plugin": "^4.2.0",
     "xmlserializer": "^0.6.1"
