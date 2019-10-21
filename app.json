@@ -1,0 +1,223 @@
+{
+  "name": "Holipay",
+  "addons": [
+    "jawsdb:kitefin",
+    "rollbar:free"
+  ],
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "hobby"
+    }
+  },
+  "scripts": {
+    "postdeploy": "npm run migrate"
+  },
+  "env": {
+    "HOLIPAY_EMAIL": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_ACCOUNT_ID": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_API_CODE": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_PASSWORD": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_COUNTRY_CODE": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_DEFAULT_COUNTRY_STATE": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_ENVIRONMENT": {
+      "required": true
+    },
+    "HOLIPAY_GREEN_ID_VERIFICATION_API_URL": {
+      "required": true
+    },
+    "HOLIPAY_TWILIO_SID": {
+      "required": true
+    },
+    "HOLIPAY_TWILIO_TOKEN": {
+      "required": true
+    },
+    "HOLIPAY_TWILIO_PHONE": {
+      "required": true
+    },
+    "HOLIPAY_AWS_ACCESS_KEY": {
+      "required": true
+    },
+    "HOLIPAY_AWS_ACCESS_SECRET": {
+      "required": true
+    },
+    "HOLIPAY_AWS_REGION": {
+      "required": true
+    },
+    "HOLIPAY_MANDRILL_API_KEY": {
+      "required": true
+    },
+    "HOLIPAY_MAIL_CHIMP_POST_URL": {
+      "required": true
+    },
+    "HOLIPAY_MAIL_CHIMP_API_KEY": {
+      "required": true
+    },
+    "HOLIPAY_MAIL_CHIMP_LIST_ID": {
+      "required": true
+    },
+    "HOLIPAY_MAIL_CHIMP_VERIFIED_USERS_INTEREST_ID": {
+      "required": true
+    },
+    "HOLIPAY_MAIL_CHIMP_UNVERIFIED_USERS_INTEREST_ID": {
+      "required": true
+    },
+    "HOLIPAY_TOKEN_SECRET": {
+      "generator": "secret"
+    },
+    "HOLIPAY_REFRESH_SECRET": {
+      "generator": "secret"
+    },
+    "HOLIPAY_EQUIFAX_URL": {
+      "generator": "secret"
+    },
+    "HOLIPAY_EQUIFAX_USERNAME": {
+      "generator": "secret"
+    },
+    "HOLIPAY_EQUIFAX_PASSWORD": {
+      "generator": "secret"
+    },
+    "HOLIPAY_PIN_PAYMENT_PUBLIC_API_KEY": {
+      "required": true
+    },
+    "HOLIPAY_PIN_PAYMENT_SECRET_API_KEY": {
+      "required": true
+    },
+    "HOLIPAY_PIN_PAYMENT_API_URL": {
+      "required": true
+    },
+    "HOLIPAY_PIN_PAYMENT_ENVIRONMENT": {
+      "required": true
+    },
+    "BANKSTATEMENTS_CHECK_DEV_URL": {
+      "required": true
+    },
+    "BANKSTATEMENTS_CHECK_LIVE_URL": {
+      "required": true
+    }
+  },
+  "environments": {
+    "test": {
+      "env": {
+        "HOLIPAY_EMAIL": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_ACCOUNT_ID": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_API_CODE": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_PASSWORD": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_COUNTRY_CODE": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_DEFAULT_COUNTRY_STATE": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_ENVIRONMENT": {
+          "required": true
+        },
+        "HOLIPAY_GREEN_ID_VERIFICATION_API_URL": {
+          "required": true
+        },
+        "HOLIPAY_TWILIO_SID": {
+          "required": true
+        },
+        "HOLIPAY_TWILIO_TOKEN": {
+          "required": true
+        },
+        "HOLIPAY_TWILIO_PHONE": {
+          "required": true
+        },
+        "HOLIPAY_AWS_ACCESS_KEY": {
+          "required": true
+        },
+        "HOLIPAY_AWS_ACCESS_SECRET": {
+          "required": true
+        },
+        "HOLIPAY_AWS_REGION": {
+          "required": true
+        },
+        "HOLIPAY_MANDRILL_API_KEY": {
+          "required": true
+        },
+        "HOLIPAY_MAIL_CHIMP_POST_URL": {
+          "required": true
+        },
+        "HOLIPAY_MAIL_CHIMP_API_KEY": {
+          "required": true
+        },
+        "HOLIPAY_MAIL_CHIMP_LIST_ID": {
+          "required": true
+        },
+        "HOLIPAY_MAIL_CHIMP_VERIFIED_USERS_INTEREST_ID": {
+          "required": true
+        },
+        "HOLIPAY_MAIL_CHIMP_UNVERIFIED_USERS_INTEREST_ID": {
+          "required": true
+        },
+        "HOLIPAY_TOKEN_SECRET": {
+          "generator": "secret"
+        },
+        "HOLIPAY_REFRESH_SECRET": {
+          "generator": "secret"
+        },
+        "HOLIPAY_APP_URL": {
+          "required": true
+        },
+        "HOLIPAY_EQUIFAX_URL": {
+          "required": true
+        },
+        "HOLIPAY_EQUIFAX_USERNAME": {
+          "required": true
+        },
+        "HOLIPAY_EQUIFAX_PASSWORD": {
+          "required": true
+        },
+        "HOLIPAY_PIN_PAYMENT_PUBLIC_API_KEY": {
+          "required": true
+        },
+        "HOLIPAY_PIN_PAYMENT_SECRET_API_KEY": {
+          "required": true
+        },
+        "HOLIPAY_PIN_PAYMENT_API_URL": {
+          "required": true
+        },
+        "HOLIPAY_PIN_PAYMENT_ENVIRONMENT": {
+          "required": true
+        },
+        "BANKSTATEMENTS_CHECK_DEV_URL": {
+          "required": true
+        },
+        "BANKSTATEMENTS_CHECK_LIVE_URL": {
+          "required": true
+        }
+      },
+      "formation": {
+        "test": {
+          "quantity": 1,
+          "size": "performance-m"
+        }
+      },
+      "scripts": {
+        "test-setup": "npm run migrate",
+        "test": "npm run lint && npm test"
+      }
+    }
+  }
+}

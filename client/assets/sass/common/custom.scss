@@ -1,0 +1,165 @@
+@import "vars";
+@import "mixins";
+
+* {
+  outline: none;
+}
+
+.tooltip {
+  &.show {
+    opacity: 1;
+  }
+}
+
+.error-message {
+  //position: relative;
+  font-size: 12px;
+  line-height: 12px;
+  color: rgb(244, 67, 54);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.holy-select {
+  padding: 6px 0;
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid black;
+  margin-top: 15px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  color: black;
+}
+
+.btnViolet {
+  outline: none;
+  background-color: $holi-color;
+  color: $white;
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 600;
+  margin-top: 5px;
+  min-width: 100px;
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: darken($holi-color, 10%);
+    color: $white;
+  }
+  &.btn {
+    outline: none;
+  }
+}
+
+.user-icon {
+    padding: 48px !important;
+    padding-bottom: 17px !important;
+    font-size: 130px;
+    line-height: 55px;
+    color: #5f6978;
+    background: #cad1d8;
+    overflow: hidden;
+}
+
+.notification_message {
+  .label {
+    margin-top: 15px;
+    text-align: center;
+    color: green;
+    white-space: normal;
+    background: white;
+    font-size: 12px;
+
+    &.notification {
+      display: inline-block;
+      text-align: left;
+      line-height: 20px;
+    }
+    &.label-danger {
+      color: red !important;
+    }
+  }
+}
+
+.m-feature_icon {
+  font-size: 135px;
+  display: block;
+  color: $holi-color;
+  line-height: 135px;
+}
+
+/* Bootstrap Modal */
+.modal-content {
+  box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+  border: 0;
+  border-radius: 0;
+  padding: 0 40px;
+  color: #646464;
+}
+
+//.modal-content__img {
+//  margin: 20px -40px;
+//}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  padding: 0;
+}
+
+.modal-header {
+  font-family: 'SourceSansPro', sans-serif;
+  h4 {
+    font-size: 30px;
+    line-height: 75px;
+    font-weight: 300;
+  }
+}
+
+.modal-header{
+  .close {
+    line-height: 1;
+    color: #909090;
+    outline: none;
+    margin: 0;
+    opacity: 1;
+    font-size: 60px;
+    font-weight: 300;
+    @include transition(color .2s);
+  }
+  &:hover{
+    color: #00ffd0;
+  }
+}
+
+.modal-content .lead {
+  font-family: 'SourceSansPro', sans-serif;
+  font-weight: 400;
+}
+
+.modal-footer,
+.modal-body {
+  line-height: 30px;
+  text-align: justify;
+  padding: 20px 0;
+}
+
+/* // Bootstrap Modal */
+
+/* Footer
+==============================*/
+.footer {
+  position: relative;
+  overflow: hidden;
+  background-color: #652d90;
+  text-align: center;
+}
+
+.footer .f-title {
+  margin-bottom: 30px;
+}
+
+.footer .f-btn {
+  margin-top: 16px;
+}

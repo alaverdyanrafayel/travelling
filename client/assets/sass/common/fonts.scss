@@ -1,0 +1,115 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'SourceSansPro';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/SourceSansPro-Bold.eot');
+  src: local('SourceSansPro Bold'), local('SourceSansPro-Bold'),
+  url('/fonts/SourceSansPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+  url('/fonts/SourceSansPro-Bold.woff') format('woff'),
+  url('/fonts/SourceSansPro-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/SourceSansPro-Light.eot');
+  src: local('SourceSansPro Light'), local('SourceSansPro-Light'),
+  url('/fonts/SourceSansPro-Light.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/SourceSansPro-Light.woff2') format('woff2'),
+  url('/fonts/SourceSansPro-Light.woff') format('woff'),
+  url('/public/fonts/SourceSansPro-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/SourceSansPro-Regular.eot');
+  src: local('SourceSansPro Regular'), local('SourceSansPro-Regular'),
+  url('/fonts/SourceSansPro-Regular.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+  url('/fonts/SourceSansPro-Regular.woff') format('woff'),
+  url('/fonts/SourceSansPro-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'holipay';
+  src: url('/fonts/holi-font/holipay.eot?9d13a2');
+  src: url('/fonts/holi-font/holipay.eot?9d13a2#iefix') format('embedded-opentype'),
+  url('/fonts/holi-font/holipay.ttf?9d13a2') format('truetype'),
+  url('/fonts/holi-font/holipay.woff?9d13a2') format('woff'),
+  url('/fonts/holi-font/holipay.svg?9d13a2#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="hp-icon-"], [class*=" hp-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'holipay' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hp-icon-send-mail:before {
+  content: "\e908";
+}
+
+.hp-icon-bank-card:before {
+  content: "\e900";
+}
+
+.hp-icon-check-lock:before {
+  content: "\e901";
+}
+
+.hp-icon-growth:before {
+  content: "\e902";
+}
+
+.hp-icon-hand:before {
+  content: "\e903";
+}
+
+.hp-icon-help:before {
+  content: "\e904";
+}
+
+.hp-icon-phone-call:before {
+  content: "\e905";
+}
+
+.hp-icon-placeholder:before {
+  content: "\e906";
+}
+
+.hp-icon-round-done-button:before {
+  content: "\e907";
+}
+
+.hp-icon-shield:before {
+  content: "\e909";
+}
+
+.hp-icon-shopping-card:before {
+  content: "\e90a";
+}
+
+.hp-icon-suitcase:before {
+  content: "\e90b";
+}
+
+.hp-icon-suitcase-slim:before {
+  content: "\e90c";
+}

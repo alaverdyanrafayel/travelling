@@ -1,0 +1,140 @@
+@import "../common/vars";
+
+.payment-form-wrapper{
+  .form-group-wrapper{
+    &:not(.credit-card-wrapper),  &:not(.btnCreate-wrapper){
+      padding-left: 0;
+    }
+  }
+  .btnCreate-wrapper{
+    padding: 8px; 
+    @media screen and (max-width:767px){
+      padding: 0
+    }
+  }
+  .credit-card-wrapper{
+    margin-top: 25px;
+    padding-left: 15px;
+    #field-wrapper{
+      padding-right: 0;
+    }
+    .credit-card-error{
+        color: #ff0000;
+        padding-top: 15px;
+        font-size: 13px;
+    }
+    .ciTvcc{
+      font-size: 13px;     
+    }
+  }
+  .form-group-wrapper{
+    width: 49%;
+    .form-group{
+      display: inline-block;
+      width: 50%;
+      margin-top: 0;
+      margin-bottom: 0;
+      @media screen and (max-width:767px){
+        width: 100%;
+      }
+      div{
+        margin-top: 0!important;
+        margin-bottom: 0!important;
+        div{
+          label{
+            top: 30px!important;
+          }
+          hr{
+            bottom: 11px!important;
+          }
+          div{
+            label{
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.payment-table-wrapper{
+  overflow-x: auto;
+  .payment-table {
+    width: 100%;
+    max-width: 100%;
+    border-top: 1px solid #ddd;
+    thead {
+      > tr {
+        > th {
+          vertical-align: bottom;
+          border-bottom: 2px solid #ddd;
+          text-align: left;
+
+        }
+      }
+      &:first-child > tr:first-child > th {
+        border-top: 0;
+      }
+    }
+    > tbody, > tfoot, > thead{
+      > tr{
+        > td, > th {
+          padding: 8px;
+          line-height: 1.42857143;
+          vertical-align: top;
+          white-space: nowrap;
+          vertical-align: middle;
+        }
+        th{
+          border-top: 1px solid #ddd;
+        }
+        td{
+          &.actions{
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+          }
+        }
+      }
+      .actions{
+        width: 16.66667%;
+      }
+      .card-number{
+        width: 23.33333%;
+      }
+      .card-exp-month{
+        width: 10%;
+      }
+      .card-address-line{
+        width: 25%;
+      }
+      .card-address-city{
+        width: 25%;
+      }
+    }
+  
+  }
+}
+
+.btnCreate{
+  width: 100%;
+}
+
+.bordered-box{
+  .approved {
+    font-size: 45px;
+  }
+  .packing{
+    font-size: 25px;
+    padding-bottom: 30px;
+  }
+  .interest-free-payment-finalise, .finalise-confirm{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  .manual-decision{
+    font-size: 20px;
+  }
+  .finalise-rejection{
+    font-size: 20px;
+  }
+}

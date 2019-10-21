@@ -1,0 +1,22 @@
+@import '~react-rangeslider/lib/index.css';
+@import '~bootstrap-slider/dist/css/bootstrap-slider.min.css';
+@import '~react-widgets/dist/css/react-widgets.css';
+
+$fa-font-path: "/fonts/font-awesome";
+@import "~font-awesome/scss/font-awesome";
+@import "common/bootstrap";
+@import "common/vars";
+@import "common/mixins";
+@import "common/fonts";
+@import "common/override";
+@import "common/colors";
+@import "common/custom";
+@import "common/tools";
+@import "common/collapsable";
+@import "partials/layout";
+@import "partials/signin";
+@import "partials/mobileVerification";
+@import "partials/dashboard";
+@import "partials/travel";
+@import "partials/home";
+@import "partials/payment";

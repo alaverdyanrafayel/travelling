@@ -1,0 +1,190 @@
+@import "../common/vars";
+
+.mainWrapperSignIn {
+  margin: 0 !important;
+  position: relative;
+  left: 480px;
+  top: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+  h4{
+    font-size: 15px;
+  }
+  .createAccountContent{
+    padding-bottom: 36px;
+    .createAccount {
+      position:fixed;
+      overflow: auto;
+      margin-left: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      outline: none;
+      h4{
+        font-size: 16px;
+      }
+      .error-text{
+       color: red;
+       display: block;
+       width: 334px;
+       margin: 0 auto
+      }
+      .login-form{
+       margin-bottom: 40px;
+      }
+      .form-group {
+        .col-sm-12 {
+          >div {
+            width: 100% !important;
+          }
+        }
+
+        .checkboxWrapper {
+          >div{
+            >div {
+              margin-right: 10px !important;
+            }
+          }
+        }
+      }
+      .btn-signin{
+        outline: none;
+        background-color: $holi-color;
+        color: $white;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-top: 10px;
+        height: 50px;
+
+        &:hover,
+        &:focus,
+        &:active{
+          outline: none;
+          background-color: darken($holi-color, 10%);
+          color: $white;
+        }
+        &.btn{
+          outline: none;
+        }
+      }
+    }
+    .aboutHolipay{
+      .right-list{
+       position: absolute;
+       z-index: 1;
+      }
+      .right-list-btn{
+       position: relative;
+       top: 274px;
+       width: 200px;
+       z-index: 1;
+
+       .mc-btn{
+        margin: 20px 0px;
+       }
+      }
+      .right-opacity{
+        position: fixed;
+        z-index:0;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        left: 410px;
+        padding-top: 120px;
+        background-color: #642e90;
+        opacity: .5;
+      }
+      margin-bottom: 0px !important;
+      ul{
+        padding-left: 0;
+        list-style-type: none;
+        li{
+          margin-bottom: 10px;
+          position: relative;
+          padding-left: 13px;
+          color: #fff;
+          font-size:17px;
+          &:before{
+            content: "\2713";
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .mainWrapperSignIn {
+    .createAccountContent {
+      &:first-child {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 350px;
+        }
+      }
+      .createAccount{
+       position: fixed;
+
+      }
+    }
+    .right-list{
+     z-index: 0;
+    }
+  }
+}
+
+@media (max-width: 991px){
+  .btn-signup{
+    font-size: 17px;
+    line-height: 34px;
+  }
+  .right-list{
+   z-index: 0 !important;
+  }
+  .right-list-btn{
+   z-index: 0 !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .mainWrapperSignIn {
+    .createAccountContent {
+      .createAccount {
+        float: none;
+        max-width: 410px;
+        .pin-class{
+         width: 70px !important;
+        }
+      }
+      .right-list{
+       z-index: 0;
+      }
+    }
+  }
+}
+@media (min-width: 1200px){
+  .mainWrapperSignIn {
+    width: 600px !important;
+  }
+}
+
+.pin-class{
+  width: 120px;
+}
+
+@media all and (max-width: 767px) { /* Off Animation on Mobile Devices */
+ .pin-class{
+  width: 70px !important;
+ }
+}
+
+.merchant-login-box{
+  float: left;
+  max-width: none;
+  border: 1px solid #000;
+}
+

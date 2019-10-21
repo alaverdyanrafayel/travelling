@@ -1,0 +1,403 @@
+@import "../common/vars";
+@import "../common/mixins";
+@import url("https://simpleui-au.vixverify.com/df/assets/stylesheets/greenid.css");
+
+#greenid-div {
+  width: 45%;
+  margin: 0 auto;
+  clear: both;
+  #greenid-container {
+    width: 45%;
+    margin: 0 auto;
+    outline: none;
+    padding: 18px;
+    #greenid-intro-content {
+      text-align: center;
+      h1 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      #greenid-intro-words {
+        p {
+          color: #635f5f;
+          font-size: 15px;
+          margin-bottom: 0;
+        }
+      }
+    }
+    #greenid-source-content {
+      border-top: 0;
+      padding-top: 10px;
+      #greenid-source-title {
+        display: block;
+        h2 {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          font-weight: bold;
+          margin-right: 0;
+        }
+        .glyphicon {
+          font-size: 13px;
+          margin-right: 0;
+          color: black;
+          top: 0;
+        }
+      }
+      #greenid-source-list-container {
+        display: block !important;
+        #greenid-option-list {
+          width: 100%;
+          button {
+            width: 100%;
+          }
+          .dropdown-menu {
+            border: 1px solid #333333;
+            @include border-radius(0);
+            #onesourceleft-alert {
+              @include border-radius(0);
+            }
+            ul {
+              li {
+                @include border-radius(0);
+                &.list-group-item {
+                  &.onesourceleft {
+                    background-color: fade-out($holi-color, .9);
+                    border-color: fade-out($holi-color, .9);
+                    a {
+                      color: $holi-color;
+                    }
+                    &:hover {
+                      opacity: .8;
+                      a {
+                        text-decoration: none;
+                      }
+                    }
+                    &:focus {
+                      outline: none;
+                    }
+                  }
+                  border-color: transparent;
+                  .greenid-modal-launch {
+                    font-weight: bold;
+                    text-decoration: none;
+                    outline: none;
+                    background-color: $holi-color;
+                    color: $white;
+                    border-color: $holi-color;
+                    width: 180px;
+                    &:hover,
+                    &:focus,
+                    &:active {
+                      outline: none;
+                      background-color: darken($holi-color, 10%);
+                      color: $white;
+                    }
+                  }
+                  &:hover {
+                    background-color: transparent;
+                  }
+
+                }
+              }
+            }
+            .greenid-alert-info {
+              background-color: fade-out($holi-color, .8);
+              border-color: fade-out($holi-color, .8);
+              color: $holi-color;
+            }
+            h2 {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    .greenid-modal {
+      .modal-content {
+        @include border-radius(0);
+        button {
+          @include border-radius(0);
+          font-size: 16px;
+        }
+        #greenid-save-and-complete-later {
+          outline: none;
+          background-color: $holi-color;
+          color: $white;
+          border-color: $holi-color;
+          &:hover,
+          &:focus,
+          &:active {
+            outline: none;
+            background-color: darken($holi-color, 10%);
+            color: $white;
+          }
+          &.btn {
+            outline: none;
+          }
+        }
+        .modal-header, .modal-footer {
+          border-color: transparent;
+        }
+      }
+    }
+    #greenid-option-list-toggle {
+      text-align: left;
+      border: 1px solid black;
+      @include border-radius(0);
+      @include box-shadow(none);
+      position: relative;
+      padding: 9px 8px;
+      .caret {
+        right: 6px;
+        top: 17px;
+        position: absolute;
+        border-top: 6px solid;
+        border-right: 3px solid transparent;
+        border-left: 3px solid transparent;
+      }
+      &:hover, &:focus, &:visited {
+        background-color: transparent;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+    .form-control {
+      &:focus {
+        outline: none;
+      }
+    }
+    input {
+      &.form-control {
+        border-color: transparent transparent black transparent;
+        @include border-radius(0);
+        @include box-shadow(none);
+        padding: 9px 4px;
+      }
+    }
+    .input-group {
+      &.date {
+        border-bottom: 1px solid black;
+        > input {
+          border: transparent;
+        }
+      }
+    }
+    select {
+      &.form-control {
+        border-color: black;
+        @include border-radius(0);
+        @include box-shadow(none);
+        padding: 9px 4px;
+        height: auto;
+      }
+    }
+    .greenid-datepicker {
+      border: 0;
+      background: transparent;
+    }
+    #greenid-submit-button-container {
+      button {
+        width: 100%;
+        outline: none;
+        background-color: $holi-color;
+        color: $white;
+        font-size: 16px;
+        line-height: 30px;
+        font-weight: 600;
+        margin-top: 5px;
+        border: 0;
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: darken($holi-color, 10%);
+          color: $white;
+        }
+        &.btn {
+          outline: none;
+        }
+      }
+    }
+
+    .greenid-alert {
+      &.greenid-alert-danger {
+        background-color: rgba(165, 63, 103, 0.02);
+        color: $error;
+        border-color: fade-out($error, .8);
+        position: relative;
+        @include border-radius(0);
+        font-size: 14px;
+        padding-left: 51px;
+        .glyphicon {
+          font-size: 22px;
+          top: 50%;
+          float: left;
+          margin-left: -34px;
+          position: absolute;
+          margin-top: -11px;
+        }
+        &.alert-dismissable {
+          padding-right: 32px;
+          .glyphicon {
+            margin-left: -45px;
+          }
+        }
+      }
+    }
+    .greenid-has-error {
+      .control-label, .help-block, .greenid-helpicon {
+        color: $error;
+      }
+    }
+  }
+}
+
+.notification_message_container {
+  width: 45%;
+  margin: 0 auto;
+  clear: both;
+  padding: 0px 18px 24px 18px;
+  .notification_message {
+    width: 45%;
+    margin: 0 auto;
+    outline: none;
+
+    > div {
+
+      > div {
+        background-color: rgba(165, 63, 103, 0.02);
+        border: 1px solid fade-out($error, .8);
+        position: relative;
+        @include border-radius(0);
+        padding: 15px 28px 10px 28px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        .label-danger {
+          &.notification {
+            font-size: 14px;
+            color: $error !important;
+            background-color: transparent;
+            padding: 0 0 5px 34px;
+            position: relative;
+            font-weight: 500;
+          }
+          &:before {
+            position: absolute;
+            font: 24px "FontAwesome";
+            content: "\f05c";
+            left: 0;
+          }
+        }
+      }
+    }
+  }
+  .notification_message_button_container {
+    width: 100%;
+    text-align: center;
+    button {
+      width: 45%;
+      outline: none;
+      background-color: $holi-color;
+      color: $white;
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: 600;
+      margin-top: 75px;
+      border: 0;
+      &:hover,
+      &:focus,
+      &:active {
+        outline: none;
+        background-color: darken($holi-color, 10%);
+        color: $white;
+      }
+      &.btn {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #greenid-div {
+    width: 50%;
+    #greenid-container {
+      width: 65%;
+    }
+  }
+  .notification_message_container {
+    width: 50%;
+    .notification_message {
+      width: 65%;
+
+    }
+    .notification_message_button_container {
+      button {
+        width: 65%;
+      }
+    }
+  }
+}
+
+.identity-steps-container{
+ width: 40%;
+ margin: 0 auto;
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  #greenid-div {
+    width: 65%;
+    #greenid-container {
+      width: 98%;
+    }
+  }
+  .identity-steps-container{
+   width: 80%;
+   margin: 0 auto;
+  }
+  .notification_message_container {
+    width: 65%;
+    .notification_message {
+      width: 98%;
+    }
+    .notification_message_button_container {
+      button {
+        width: 98%;
+      }
+    }
+  }
+}
+@media (max-width: 767px){
+  .identity-steps-container{
+   width: 100%;
+   margin: 0 auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  #greenid-div {
+    width: 85%;
+    #greenid-container {
+      width: 98%;
+      .greenid-modal {
+        .modal-content {
+          margin-bottom: 10px !important;
+        }
+      }
+    }
+  }
+  .identity-steps-container{
+   width: 80%;
+   margin: 0 auto;
+  }
+  .notification_message_container {
+    width: 85%;
+    .notification_message {
+      width: 98%;
+    }
+    .notification_message_button_container {
+      button {
+        width: 98%;
+      }
+    }
+  }
+}

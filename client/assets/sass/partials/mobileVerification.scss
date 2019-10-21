@@ -1,0 +1,134 @@
+@import "../common/vars";
+
+.mainWrapper {
+  > div {
+    padding-bottom: 36px;
+    .bordered-box {
+      margin: 0 auto;
+      outline: none;
+      padding: 18px;
+      max-width: 410px;
+      h5 {
+        font-size: 16px;
+        text-align: center;
+      }
+      p {
+        text-align: center;
+      }
+      .row {
+        .col-sm-2 {
+          padding-left: 0;
+          text-align: right;
+        }
+        .col-sm-10 {
+          padding-right: 0;
+        }
+      }
+      .form-group {
+
+        .col-sm-12 {
+          padding: 0 !important;
+        }
+        input[type="number"] {
+          -moz-appearance: textfield;
+          &:hover {
+            -webkit-appearance: none;
+          }
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+          }
+          &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+          }
+        }
+      }
+      .btn-send-code {
+        outline: none;
+        background-color: $holi-color;
+        color: $white;
+        font-size: 14px;
+        line-height: 25px;
+        font-weight: 600;
+        margin-top: 5px;
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: darken($holi-color, 10%);
+          color: $white;
+        }
+        &.btn {
+          outline: none;
+        }
+      }
+      .btn-verify {
+        outline: none;
+        background-color: $holi-color;
+        color: $white;
+        font-size: 18px;
+        line-height: 36px;
+        font-weight: 600;
+        margin-top: 10px;
+        width: 100%;
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: darken($holi-color, 10%);
+          color: $white;
+        }
+        &.btn {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-send-code {
+    width: 100%;
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainWrapper {
+    > div {
+      .bordered-box {
+        width: 100%;
+        max-width: 100%;
+        .form-group {
+          span {
+            > div {
+              > div {
+                width: 100% !important;
+              }
+            }
+          }
+          span {
+            > div {
+              width: 85% !important;
+            }
+          }
+        }
+        .btn-send-code {
+          padding: 4px;
+        }
+      }
+    }
+    .row {
+      .col-xs-4 {
+        padding-left: 0;
+      }
+      .col-xs-8 {
+        padding-right: 0;
+      }
+    }
+    .logoWrapper {
+      img {
+        max-width: 233px;
+      }
+    }
+  }
+}

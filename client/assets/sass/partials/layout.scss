@@ -1,0 +1,290 @@
+.logoWrapper {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+
+  img {
+    max-width: 310px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+ .logoWrapper{
+  display: none !important;
+ }
+}
+
+.datePicker {
+  label {
+    color: rgb(99, 95, 95) !important;
+    font-size: 15px;
+    font-weight: 400;
+    transform: scale(0.75) translate(0px, -28px) !important;
+  }
+  div {
+    opacity: 1 !important;
+  }
+}
+.mainWrapper {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+  h4 {
+    font-size: 15px;
+  }
+  .aboutHolipay{
+    width: 50%;
+  }
+  .signup-form{
+    width: 50%;
+  }
+  .createAccountContent {
+    padding-bottom: 36px;
+    .createAccount {
+      margin: auto;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      outline: none;
+      h4 {
+        font-size: 16px;
+      }
+      .form-group {
+        .col-sm-12 {
+          > div {
+            width: 100% !important;
+          }
+        }
+        .checkboxWrapper {
+          > div {
+            > div {
+              margin-right: 10px !important;
+            }
+          }
+        }
+        .col-sm-5 {
+          text-align: left;
+        }
+        select {
+          height: 30px;
+          line-height: 30px;
+          background-color: #ffffff;
+          border: 1px solid #cccccc;
+          display: inline-block;
+          padding: 4px 6px;
+          margin-bottom: 10px;
+          font-size: 14px;
+          color: #555555;
+          vertical-align: middle;
+          @include border-radius(4px);
+          margin-right: 5px;
+        }
+      }
+      .btn-signup {
+        outline: none;
+        background-color: $holi-color;
+        color: $white;
+        font-size: 20px;
+        line-height: 40px;
+        font-weight: 600;
+        margin-top: 10px;
+
+        &:hover,
+        &:focus,
+        &:active {
+          outline: none;
+          background-color: darken($holi-color, 10%);
+          color: $white;
+        }
+        &.btn {
+          outline: none;
+        }
+        &.sign-in{
+          height: 50px;
+        }
+      }
+    }
+    .aboutHolipay {
+      margin-bottom: 15px;
+      margin-top: 100px;
+      ul {
+        padding-left: 0;
+        list-style-type: none;
+        li {
+          margin-bottom: 10px;
+          position: relative;
+          padding-left: 13px;
+          color: #635f5f;
+          &:before {
+            content: "-";
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
+    @media (max-width: 768px) {
+      .aboutHolipay{
+        position: absolute;
+        top: 650px;
+        width: 100% !important;
+      }
+      .signup-form{
+        position: absolute;
+        top: 0px;
+        width:100%;
+      }
+    }
+
+  }
+}
+@media (max-width: 500px) {
+  .mainWrapper {
+    .createAccountContent {
+      &:first-child {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        img {
+          max-width: 350px;
+        }
+      }
+      .aboutHolipay{
+        position: absolute;
+        top: 620px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .btn-signup {
+    font-size: 17px;
+    line-height: 34px;
+  }
+}
+@media (min-width: 992px) {
+  .mainWrapper {
+    .createAccountContent {
+      .createAccount {
+        float: none;
+        max-width: 1000px;
+        &.add-customer{
+          max-width: 610px;
+          height: 481px;
+        }
+        &.add-merchant{
+          max-width: 610px;
+          height: 581px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .mainWrapper {
+    width: 1170px;
+    .aboutHolipay{
+      width: 50% !important;
+    }
+    .signup-form{
+      width: 50%;
+    }
+  }
+}
+
+
+.wizard {
+    margin: 20px auto;
+    background: #fff;
+
+    .nav-tabs {
+        position: relative;
+        margin: 40px auto;
+        margin-bottom: 0;
+        border-bottom: 0px !important;
+    }
+
+    div.wizard-inner {
+        position: relative;
+    }
+
+    li.active span.round-tab {
+        background-color: darken($holi-color, 10%);
+        border: 0px;
+    }
+    li.active span.round-tab i{
+        color: #5bc0de;
+    }
+    .nav-tabs > li {
+        width: 25%;
+    }
+    .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        margin: 20px auto;
+        border-radius: 100%;
+        padding: 0;
+    }
+
+    .tab-pane {
+        position: relative;
+        padding-top: 50px;
+    }
+
+    h3 {
+        margin-top: 0;
+    }
+}
+
+
+.connecting-line {
+    height: 2px;
+    background: #e0e0e0;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+
+span.round-tab {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid #e0e0e0;
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+span.round-tab i{
+    color:#555555;
+}
+
+@media( max-width : 585px ) {
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+        .nav-tabs > li a {
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+        }
+    }
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+}

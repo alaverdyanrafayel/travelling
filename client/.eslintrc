@@ -1,0 +1,28 @@
+{
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "localStorage": true,
+    "window": true,
+    "document": true
+  },
+  "extends": "plugin:react/recommended",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "jest",
+    "react"
+  ],
+  "rules": {
+    "jest/no-disabled-tests": "error",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/valid-expect": "error",
+    "no-multiple-empty-lines": ["error", {"max": 1}],
+    "camelcase": ["warn", {"properties": "never"}]
+  }
+}

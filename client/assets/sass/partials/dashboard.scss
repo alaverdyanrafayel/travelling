@@ -1,0 +1,548 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+h1.page-header {
+  margin-top: -5px;
+}
+
+.sidebar {
+  padding-left: 0;
+}
+
+.main-container {
+  background: #FFF;
+  padding-top: 15px;
+  margin-top: -20px;
+}
+
+.card {
+  border: 1px solid #000;
+  @include border-radius(10px)
+  margin: 10px 0 20px 0;
+  .cardheader{
+   height: 85px;
+  }
+  &.hovercard {
+    position: relative;
+    padding-top: 0;
+    overflow: hidden;
+    text-align: center;
+    margin-top:0px;
+    .avatar {
+      position: relative;
+      top: -50px;
+      margin-bottom: -50px;
+      img {
+        width: 100px;
+        height: 100px;
+        max-width: 100px;
+        max-height: 100px;
+        @include border-radius(50%);
+        border: 5px solid rgba(255, 255, 255, 0.5);
+      }
+    }
+    .info {
+      padding: 4px 8px 10px;
+      .title {
+        margin-bottom: 4px;
+        font-size: 24px;
+        line-height: 1;
+        color: #262626;
+        vertical-align: middle;
+      }
+    }
+    .bottom {
+      padding: 0 20px;
+      margin-bottom: 17px;
+    }
+  }
+}
+
+.card-comments .media-heading {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+:focus {
+  outline: none;
+}
+
+/*
+    Sometimes the sub menus get too large for the page and prevent the menu from scrolling, limiting functionality
+    A quick fix is to change .side-menu to
+
+    -> position:absolute
+
+    and uncomment the code below.
+    You also need to uncomment
+
+    -> <div class="absolute-wrapper"> </div> in the html file
+
+    you also need to tweek the animation. Just uncomment the code in that section
+    --------------------------------------------------------------------------------------------------------------------
+    If you want to make it really neat i suggest you look into an alternative like http://areaaperta.com/nicescroll/
+    This will allow the menu to say fixed on body scoll and scoll on the side bar if it get to large
+*/
+/*.absolute-wrapper{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f8f8;
+    border-right: 1px solid #e7e7e7;
+}*/
+
+.side-menu {
+  position: fixed;
+  left: 0;
+  width: 18%;
+  height: 100%;
+  background-color: #f8f8f8;
+  border-right: 1px solid #e7e7e7;
+  z-index: 1000;
+  .navbar {
+    border: none;
+  }
+  .navbar-header {
+    width: 100%;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .navbar-nav {
+    .active {
+      a {
+        background-color: transparent;
+        margin-right: -1px;
+        border-right: 5px solid #e7e7e7;
+      }
+    }
+    li {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #e7e7e7;
+      a {
+        padding: 15px;
+        .glyphicon {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+  #dropdown {
+    border: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+    .caret {
+      float: right;
+      margin: 9px 5px 0;
+    }
+    .indicator {
+      float: right;
+    }
+    > a {
+      border-bottom: 1px solid #e7e7e7;
+    }
+    .panel-body {
+      padding: 0;
+      background-color: #f3f3f3;
+      .navbar-nav {
+        width: 100%;
+        li {
+          padding-left: 15px;
+          border-bottom: 1px solid #e7e7e7;
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+      .panel > a {
+        margin-left: -20px;
+        padding-left: 35px;
+      }
+      .panel-body {
+        margin-left: -15px;
+        li {
+          padding-left: 30px;
+          &:last-child {
+            border-bottom: 1px solid #e7e7e7;
+          }
+        }
+      }
+    }
+  }
+  #search-trigger {
+    background-color: #f3f3f3;
+    border: 0;
+    border-radius: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px 18px;
+  }
+  .brand-name-wrapper {
+    min-height: 50px;
+    .navbar-brand {
+      display: block;
+    }
+  }
+  #search {
+    position: relative;
+    z-index: 1000;
+    .panel-body {
+      padding: 0;
+      .navbar-form {
+        padding: 0;
+        padding-right: 50px;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        border-top: 1px solid #e7e7e7;
+        .form-group {
+          width: 100%;
+          position: relative;
+        }
+        input {
+          border: 0;
+          border-radius: 0;
+          box-shadow: none;
+          width: 100%;
+          height: 50px;
+        }
+        .btn {
+          position: absolute;
+          right: 0;
+          top: 0;
+          border: 0;
+          border-radius: 0;
+          background-color: #f3f3f3;
+          padding: 15px 18px;
+        }
+      }
+    }
+  }
+}
+
+/* Main body section */
+.side-body {
+  margin-left: 310px;
+}
+
+.right-content {
+  top: 85px;
+  width: 82%;
+  float: right;
+}
+
+/* small screen */
+@media (max-width: 768px) {
+  .right-content {
+    width: 100%;
+  }
+  .side-menu {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-right: 0;
+    border-bottom: 1px solid #e7e7e7;
+    .brand-name-wrapper {
+      .navbar-brand {
+        display: inline-block;
+      }
+    }
+  }
+  /* Slide in animation */
+  @include keyframes(slidein) {
+    0% {
+      left: -300px;
+    }
+    100% {
+      left: 10px;
+    }
+  }
+  @include keyframes(slideout) {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -300px;
+    }
+  }
+  .side-menu-container {
+    > .navbar-nav {
+      position: fixed;
+      left: -300px;
+      width: 300px;
+      top: 43px;
+      height: 100%;
+      border-right: 1px solid #e7e7e7;
+      background-color: #f8f8f8;
+      @include animation(slideout 300ms forwards);
+      @include transform-style(preserve-3d);
+      &.slide-in {
+        @include animation(slidein 300ms forwards);
+        @include transform-style(preserve-3d);
+      }
+    }
+  }
+  @include keyframes(bodyslidein) {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 300px;
+    }
+  }
+  @include keyframes(bodyslideout) {
+    0% {
+      left: 300px;
+    }
+    100% {
+      left: 0;
+    }
+  }
+  /* Slide side body*/
+  .side-body {
+    margin-left: 5px;
+    margin-top: 70px;
+    position: relative;
+    @include animation(bodyslideout 300ms forwards);
+    @include transform-style(preserve-3d);
+  }
+  .body-slide-in {
+    @include animation(bodyslidein 300ms forwards);
+    @include transform-style(preserve-3d);
+  }
+  /* Hamburger */
+  .navbar-toggle {
+    border: 0;
+    float: left;
+    padding: 18px;
+    margin: 0;
+    border-radius: 0;
+    background-color: #f3f3f3;
+  }
+  /* Search */
+  #search .panel-body .navbar-form {
+    border-bottom: 0;
+    .form-group {
+      margin: 0;
+    }
+  }
+  .navbar-header {
+    /* this is probably redundant */
+    position: fixed;
+    z-index: 3;
+    background-color: #f8f8f8;
+  }
+  /* Dropdown tweek */
+  #dropdown .panel-body .navbar-nav {
+    margin: 0;
+  }
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.main-container {
+  .sidebar {
+    .row {
+      .layoutDirecting {
+        color: #737373;
+        font-size: 15px;
+        text-decoration:none;
+      }
+    }
+  }
+}
+
+
+.btn-del {
+  font-size: 19px;
+  color: #D04C4C;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+.btn-pencil {
+  font-size: 19px;
+  color: green;
+  cursor: pointer;
+}
+
+.btn-dashboard {
+  outline: none;
+  background-color: $holi-color;
+  color: $white;
+  font-size: 20px;
+  line-height: 40px;
+  font-weight: 600;
+  margin-top: 10px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: darken($holi-color, 10%);
+    color: $white;
+  }
+  &.btn {
+    outline: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    .panel {
+      .panel-body {
+        form {
+          > div {
+            > div {
+              width: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.progress-title {
+  font-size: 20px;
+  color: #652d90;
+  padding: 0 10px;
+}
+
+.slider.slider-horizontal {
+  width: 907px;
+}
+
+.dropzone-style {
+  width: 100%;
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  border-width: 2px;
+  border-color: #673ab7;
+  border-style: dashed;
+  border-radius: 5px;
+}
+
+.dropzone-btn {
+  position: absolute;
+  top: 130px;
+  left: 47%;
+}
+
+.dropzone-file {
+  color: green;
+  background-color: #ebe6ef;
+  text-align: center;
+}
+
+#bankstatements{
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    border: 0px;
+}
+
+
+.dashboard_menu{
+ padding: 10px 10px !important;
+ a {
+  font-size: 15px !important;
+ }
+}
+
+.dashboard_panel{
+ border: 1px solid #000;
+}
+
+.dashboard-left{
+ top: 100px;
+}
+
+.dashboard_panel_refer{
+ border: 1px solid #000;
+ width:40%;
+  .dashboard_btn{
+   @include border-radius(10px)
+  }
+}
+
+.dashboard_panel_heading{
+ border-bottom: 1px solid #000 !important;
+ height: 50px;
+ line-height: 32px;
+}
+
+.dashboard_table{
+  width: 100%;
+}
+
+.dashboard_table_head{
+ border-bottom: 1px solid #000;
+}
+
+.dashboard_table_cell{
+ padding-bottom: 10px;
+ text-align: left;
+}
+
+.layout-row{
+    margin: 6px 0px;
+    position: relative;
+    float: left;
+    left: 0px;
+    width: 100%;
+    border: 1px solid #000;
+    @include border-radius(5px)
+    padding: 10px;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .content{
+   position: absolute;
+   top: 480px;
+   width:96%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu_dashboard{
+   .menu_mobile__hamburger span{
+      background: #652d90 !important;
+    }
+  }
+  .dashboard_panel_refer{
+   width:100%;
+  }
+  .hovercard{
+    display:none;
+  }
+  .dashboard_left_nav{
+   width: 100%;
+   top: 50px;
+   position: absolute;
+  }
+  .content{
+   position: absolute;
+   top: 250px;
+  }
+  .content-merchant{
+   top: 350px;
+  }
+}
+
+.toast-container{
+  top: 80px;
+  z-index: 10001;
+  width:400px
+}
